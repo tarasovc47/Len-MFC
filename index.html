@@ -9,10 +9,19 @@
       <script>
       function test1() {
           if (document.getElementById("radio_valid_sites").checked) {
-              document.getElementById("fuck_esia").style.display = "none";
+              document.getElementById("iframe_valid_sites").style.display = "block";
+              document.getElementById("iframe_fuck_esia").style.display = "none";
+              document.getElementById("iframe_employees").style.display = "none";
           }
-          else {
-              alert("!!!")
+          else if (document.getElementById("radio_fuck_esia").checked) {
+              document.getElementById("iframe_valid_sites").style.display = "none";
+              document.getElementById("iframe_fuck_esia").style.display = "block";
+              document.getElementById("iframe_employees").style.display = "none";
+          }
+          else if (document.getElementById("radio_employees").checked) {
+              document.getElementById("iframe_valid_sites").style.display = "none"
+              document.getElementById("iframe_fuck_esia").style.display = "none";
+              document.getElementById("iframe_employees").style.display = "block";
           }
         }
         </script>
@@ -35,9 +44,8 @@
                <input type="button" value="Click Me" onclick="test1()">
             </form>
        </aside>
-       <iframe id="valid_sites" src="valid_sites.html" >
-       </iframe>
-       <iframe id="fuck_esia" src="fuck_esia.html">
-       </iframe>
+       <iframe id="iframe_valid_sites" src="valid_sites.html"></iframe>
+       <iframe id="iframe_fuck_esia" src="fuck_esia.html"></iframe>
+       <iframe id="iframe_employees" src="employees.html"></iframe>
    </body>
 </html>

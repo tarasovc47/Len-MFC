@@ -1,6 +1,7 @@
-/*iframe {
+iframe {
     width: 1600px;
     height: 750px;
     border: none;
     background: white;
-}*/
+    display: none;
+}
