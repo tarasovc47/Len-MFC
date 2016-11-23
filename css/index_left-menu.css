@@ -1,0 +1,9 @@
+.left_menu {
+    float: left;
+    background: lightgray;
+    width: 250px;
+    height: 750px;
+}
+input[type="image"] {
+    transform: scale(0.1);
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+   <head>
+      <link href="css/index_head.css" rel="stylesheet">
+      <link href="css/index_left-menu.css" rel="stylesheet">
+      <link href="css/index_frame.css" rel="stylesheet">
+      <meta charset="utf-8">
+      <title>MFC-Wiki</title>
+      <script>
+      function test1() {
+          if (document.getElementById("radio_valid_sites").checked) {
+              document.getElementById("fuck_esia").style.display = "none";
+          }
+          else if {
+              alert("!!!")
+          }
+        }
+        </script>
+   </head>
+   <body>
+       <header>
+           <h2>Добро пожаловать на сайт ленинского филиала МФЦ!</h2>
+       </header>
+       <aside class="left_menu">
+           <form action="#" method="post">
+               <label>
+                   <input type="radio" id="radio_valid_sites" name="left_menu_button" value="valid">Разрешенные сайты
+               </label><br>
+               <label>
+                   <input type="radio" id="radio_fuck_esia" name="left_menu_button" value="fuck_esia">Всё о ЕСИА
+               </label><br>
+               <label>
+                   <input type="radio" id="radio_employees" name="left_menu_button" value="employees">Сотрудники филиала
+               </label><br>               
+               <input type="button" value="Click Me" onclick="test1()">
+            </form>
+       </aside>
+       <iframe id="valid_sites" src="valid_sites.html" >
+       </iframe>
+       <iframe id="fuck_esia" src="fuck_esia.html">
+       </iframe>
+   </body>
+</html>
