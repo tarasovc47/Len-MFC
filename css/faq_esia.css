@@ -1,0 +1,25 @@
+@font-face {
+    font-family: 'Aquarion';
+    src: url('fonts/aquarion.woff') format('woff'),
+         url('fonts/aquarion.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+div, input, label{
+    display: block;
+}
+div:not(:first-child),
+span,
+input,
+label:not(#y_have_passport_and_snils):not(#n_have_passport_and_snils) {
+    display: none;
+}
+label {
+    background: yellow;
+    padding: 5px;
+    border: 2px solid greenyellow;
+}
+div {
+    background: greenyellow;
+    font-family: Aquarion;
+}

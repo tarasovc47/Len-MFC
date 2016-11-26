@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+   <head>
+	   <link href="css/faq_esia.css" rel="stylesheet">
+	   <script src="js/faq_esia.js"></script>
+	   <meta charset="utf-8">
+   </head>
+   <body>
+	   <div id="yn_have_passport_and_snils">У заявителя есть с собой паспорт и СНИЛC?<br>
+			<label id="y_have_passport_and_snils"><input type="radio" id="radio_y_have_passport_and_snils" onclick="one()">ДА</label>
+			<label id="n_have_passport_and_snils"><input type="radio" id="radio_n_have_passport_and_snils" onclick="one()">НЕТ</label>
+	   </div>
+
+	   <div id="yn_passport_and_snils_match">В паспорте и СНИЛС ФИО совпадают?</div>
+			<label id="y_passport_and_snils_match"><input type="radio" id="radio_y_passport_and_snils_match" onclick="two()">ДА</label>
+			<label id="n_passport_and_snils_match"><input type="radio" id="radio_n_passport_and_snils_match" onclick="two()">НЕТ</label>
+
+	   <div id="var_which_service">Какая услуга у посетителя в талоне?</div>
+			<label id="d_service_registration">
+				<input type="radio" id="radio_d_service_registration" onclick="three()">Регистрация
+			</label>
+				<div id="yn_have_account">Спрашиваем у посетителя: регистрировались ли вы когда-нибудь на госуслугах? Могли ли вас зарегистрировать на работе? Может СМС-ки приходили когда-нибудь с номера "gosuslugi"?
+					<label id="y_have_account"><input type="radio" id="radio_y_have_account" onclick="four()">Да, есть аккаунт</label>
+					<label id="n_have_account"><input type="radio" id="radio_n_have_account" onclick="seven()">Нет, никогда не было</label>
+				</div>
+				<div id="d_new_service_registration">Новое дело на регистрацию
+					<label id="d_new_service_registration_ok"><input type="radio" id="radio_d_new_service_registration" onclick="eight()">Далее</label>
+				</div>
+			<label id="d_service_confirmation"><input type="radio" id="radio_d_service_confirmation" onclick="five()">Подтверждение</label>
+				<div id="d_digital_signature">Подтверждение через ЭЦП
+					<label id="d_digital_signature_success"><input type="radio" id="radio_d_digital_signature_success" onclick="twenty()">Подтверждение через ЭЦП успешно!</label>
+					<label id="d_digital_signature_have_a_confirmed_account"><input type="radio" id="radio_d_digital_signature_have_a_confirmed_account" onclick="six()">Аккаунт подтверждён ранее</label>
+					<label id="d_digital_signature_not_found"><input type="radio" id="radio_d_digital_signature_not_found" onclick="twenty_three()">Ничего не найдено</label>
+				</div>
+				<div id="yn_previously_issued_passports">Есть ранее выданные паспорта?
+					<label id="y_previously_issued_passports"><input type="radio" id="radio_y_previously_issued_passports" onclick="twenty_four()">Есть ранее выданные паспорта</label>
+					<label id="n_previously_issued_passports"><input type="radio" id="radio_n_previously_issued_passports" onclick="twenty_five()">Нет ранее выданных паспортов</label>
+				</div>
+				<div id="yn_try_the_previous_passport">В ЭЦП подставляем паспорта начиная с последнего
+					<label id="y_try_the_previous_passport"><input type="radio" id="radio_y_try_the_previous_passport" onclick="twenty_six()">Один из старых паспортов подтвердился</label>
+					<label id="n_try_the_previous_passport"><input type="radio" id="radio_n_try_the_previous_passport" onclick="twenty_seven()">Ни один из паспортов не подтвердился</label>
+				</div>
+				<div id="d_digital_signature_after_recovery">Подтверждение через ЭЦП
+					<label id="d_digital_signature_after_recovery_success"><input type="radio" id="radio_d_digital_signature_after_recovery_success" onclick="twenty_two()">Подтверждение через ЭЦП успешно!</label>
+				</div>
+			<label id="d_service_recovery"><input type="radio" id="radio_d_service_recovery" onclick="six()">Восстановление</label>
+	   <div id="d_new_service_recovery">Новое дело на восстановление</div>
+			<label id="d_new_service_recovery_ok"><input type="radio" id="radio_d_new_service_recovery" onclick="eight()">Далее</label>
+	   </div>
+	   <div id="d_choose_responsible">Выбираем ответственного
+			<label id="d_choose_responsible_ok"><input type="radio" id="radio_d_choose_responsible" onclick="nine()">Далее</label>
+	   </div>
+	   <div id="d_fill_data_in_ais">Заносим данные в АИС
+	   <label id="d_fill_data_in_ais_ok"><input type="radio" id="radio_d_fill_data_in_ais" onclick="ten()">Далее</label>
+	   </div>
+	   <div id="d_registering_case">Регистрируем дело
+	   <label id="d_registering_case_ok"><input type="radio" id="radio_d_registering_case" onclick="eleven()">Далее</label>
+	   </div>
+	   <div id="d_send_inquiry">Отправляем запрос</div>
+	   <label id="d_send_inquiry_ok"><input type="radio" id="radio_d_send_inquiry" onclick="twelve()">Далее</label>
+	   </div>
+	   <div id="var_see_pdf">Смотрим полученный PDF-файл</div>
+			<label id="var_see_pdf_operation_success"><input type="radio" id="radio_var_see_pdf_operation_success" onclick="thirteen()">Операция выполнена успешно</label>
+			<label id="var_see_pdf_specified_mobile"><input type="radio" id="radio_var_see_pdf_specified_mobile" onclick="fourteen()">Статус: Предупреждение: The specified mobile phone ....</label>
+			<label id="d_no_fear"><input type="radio" id="radio_d_no_fear" onclick="twenty_one()">Ничего страшного, чуть позже появится другой файл</label>
+			<label id="var_see_pdf_have_a_confirmed_account"><input type="radio" id="radio_var_see_pdf_have_a_confirmed_account" onclick="fifteen()">Статус: Ошибка: Подтверждённая учетная запись уже существует</label>
+			<label id="d_copy_card_after_registration"><input type="radio" id="radio_d_copy_card_after_registration" onclick="six()">Копируем карточку участника</label>
+			<label id="var_see_pdf_bgir"><input type="radio" id="radio_var_see_pdf_bgir" onclick="sixteen()">Статус: Ошибка при проверке данных учетной записи в БГИР</label>
+			<div id="var_check_data">Проверяем все данные участника (КАЖДУЮ БУКВУ И ЦИФРУ)
+				<label id="var_check_data_ok"><input type="radio" id="radio_var_check_data_ok" onclick="seventeen()">Всё совпадает</label>
+				<label id="var_check_data_fix"><input type="radio" id="radio_var_check_data_fix" onclick="eighteen()">Найдена ошибка</label>
+			</div>
+			<div id="d_fix_user_card">Исправляем ошибку в карточке участника, после этого сохраняем целиком дело еще раз
+				<label id="d_fix_user_card_ok"><input type="radio" id="radio_d_fix_user_card" onclick="nineteen()">Готово</label>
+			</div>
+			<label id="var_see_pdf_user_not_confirmed"><input type="radio" id="radio_var_see_pdf_user_not_confirmed" onclick="five()">Статус: Ошибка: Пользователь не подтвержден</label>
+			<label id="var_see_pdf_user_not_found"><input type="radio" id="radio_var_see_pdf_user_not_found" onclick="twenty_eight()">Статус: Пользователь не найден</label>
+			<label id="var_see_pdf_data_is_checked"><input type="radio" id="radio_var_see_pdf_data_is_checked" onclick="twenty_nine()">Статус: Идет проверка данных учетной записи в БГИР</label>
+	   <div id="d_complete_by_procedure">Через процедуры завершаем дело
+	   		<label id="d_complete_by_procedure_ok"><input type="radio" id="radio_d_complete_by_procedure" onclick="allRight()">Всё готово, можно завершать обслуживание!</label>
+	   </div>
+	   <div id="d_dos">Отказ в обслуживании</div>
+	   <div id="d_help_4099">Звоните в IT</div>
+   </body>
+</html>

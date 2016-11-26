@@ -1,7 +1,9 @@
 iframe {
-    width: 1600px;
-    height: 750px;
+    width: 1598px;
+    height: 748px;
     border: none;
     background: white;
     display: none;
+    border: 1px solid slategray;
+    border-radius: 4px;
 }

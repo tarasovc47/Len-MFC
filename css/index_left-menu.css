@@ -4,6 +4,21 @@
     width: 250px;
     height: 750px;
 }
-input[type="image"] {
-    transform: scale(0.1);
+input[type="radio"] {
+    display: none;
+}
+.left_menu label {
+    display: block;
+    width: 250px;
+    height: 10px;
+    transition: 0.5s;
+}
+#radio_valid_sites:checked ~ .radio_valid_sites {
+    color: red;
+}
+#radio_faq_esia:checked ~ .radio_faq_esia {
+    color: red;
+}
+#radio_employees:checked ~ .radio_employees {
+    color: red;
 }

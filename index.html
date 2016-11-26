@@ -6,25 +6,7 @@
       <link href="css/index_frame.css" rel="stylesheet">
       <meta charset="utf-8">
       <title>MFC-Wiki</title>
-      <script>
-      function test1() {
-          if (document.getElementById("radio_valid_sites").checked) {
-              document.getElementById("iframe_valid_sites").style.display = "block";
-              document.getElementById("iframe_fuck_esia").style.display = "none";
-              document.getElementById("iframe_employees").style.display = "none";
-          }
-          else if (document.getElementById("radio_fuck_esia").checked) {
-              document.getElementById("iframe_valid_sites").style.display = "none";
-              document.getElementById("iframe_fuck_esia").style.display = "block";
-              document.getElementById("iframe_employees").style.display = "none";
-          }
-          else if (document.getElementById("radio_employees").checked) {
-              document.getElementById("iframe_valid_sites").style.display = "none"
-              document.getElementById("iframe_fuck_esia").style.display = "none";
-              document.getElementById("iframe_employees").style.display = "block";
-          }
-        }
-        </script>
+      <script src="js/index.js"></script>
    </head>
    <body>
        <header>
@@ -32,19 +14,11 @@
        </header>
        <aside class="left_menu">
            <form action="#" method="post">
-               <label>
-                   <input type="radio" id="radio_valid_sites" name="left_menu_button" value="valid_sites" onclick="test1()">Разрешенные сайты
-               </label><br>
-               <label>
-                   <input type="radio" id="radio_fuck_esia" name="left_menu_button" value="fuck_esia" onclick="test1()">Всё о ЕСИА
-               </label><br>
-               <label>
-                   <input type="radio" id="radio_employees" name="left_menu_button" value="employees" onclick="test1()">Сотрудники филиала
-               </label><br>
+               <input type="radio" id="radio_valid_sites" name="left_menu_button" value="valid_sites" onclick="left_menu_click()"><label for="radio_valid_sites" class="radio_valid_sites">Разрешенные сайты</label><br>
+               <input type="radio" id="radio_faq_esia" name="left_menu_button" value="faq_esia" onclick="left_menu_click()"><label for="radio_faq_esia" class="radio_faq_esia">Всё о ЕСИА</label><br>
             </form>
        </aside>
        <iframe id="iframe_valid_sites" src="valid_sites.html"></iframe>
-       <iframe id="iframe_fuck_esia" src="fuck_esia.html"></iframe>
-       <iframe id="iframe_employees" src="employees.html"></iframe>
+       <iframe id="iframe_faq_esia" src="faq_esia.html"></iframe>
    </body>
 </html>
