@@ -2,9 +2,8 @@ div, input, label{
     display: block;
 }
 div:not(:first-child),
-span,
 input,
-label:not(#y_have_passport_and_snils):not(#n_have_passport_and_snils) {
+label {
     display: none;
 }
 label, div label {
@@ -38,4 +37,11 @@ img {
 button {
     margin: 20px;
     padding: 5px;
+}
+.intro {
+    background: #FAEBD7;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    width: auto;
+    word-wrap: wrap;
+    padding: 10px;
 }

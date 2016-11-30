@@ -19,6 +19,22 @@ function clearAll(){
         {
             document.getElementsByTagName('img')[i].style.display = "none";
         }
+        for(i=0; i < document.getElementsByTagName('p').length; i++)
+        {
+            document.getElementsByTagName('p')[i].style.display = "none";
+        }
+        for(i=0; i < document.getElementsByTagName('h3').length; i++)
+        {
+            document.getElementsByTagName('h3')[i].style.display = "none";
+        }
+}
+function poehali() {
+    if (document.getElementById("poehali").onclick) {
+        clearAll();
+        document.getElementById("yn_have_passport_and_snils").style.display = "block";
+        document.getElementById("y_have_passport_and_snils").style.display = "block";
+        document.getElementById("n_have_passport_and_snils").style.display = "block";
+    }
 }
 function allRight() {
     if (document.getElementById("radio_d_complete_by_procedure").checked) {
