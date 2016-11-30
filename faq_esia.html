@@ -4,6 +4,7 @@
 	   <link href="css/faq_esia.css" rel="stylesheet">
 	   <link href="css/faq_esia_ballon.css" rel="stylesheet">
 	   <script src="js/faq_esia.js"></script>
+	   <script src="js/faq_esia_screenshots.js"></script>
 	   <meta charset="utf-8">
    </head>
    <body>
@@ -26,6 +27,7 @@
 		</div>
 		<div id="d_new_service_registration">Новое дело на регистрацию
 			<label id="d_new_service_registration_ok"><input type="radio" id="radio_d_new_service_registration" onclick="eight()">Далее</label>
+			<button id="view_new_case" onclick="view_new_case()">Как это выглядит в АИС</button>
 		</div>
 		<div id="d_digital_signature">Подтверждение через ЭЦП
 			<label id="d_digital_signature_success"><input type="radio" id="radio_d_digital_signature_success" onclick="twenty()">Подтверждение через ЭЦП успешно!</label>
@@ -45,18 +47,23 @@
 		</div>
 	   <div id="d_new_service_recovery">Новое дело на восстановление
 			<label id="d_new_service_recovery_ok"><input type="radio" id="radio_d_new_service_recovery" onclick="eight()">Далее</label>
+			<button id="view_new_case" onclick="view_new_case()">Как это выглядит в АИС</button>
 	   </div>
 	   <div id="d_choose_responsible">Выбираем ответственного
 			<label id="d_choose_responsible_ok"><input type="radio" id="radio_d_choose_responsible" onclick="nine()">Далее</label>
+			<button id="view_d_choose_responsible" onclick="view_d_choose_responsible()">Как это выглядит в АИС</button>
 	   </div>
 	   <div id="d_fill_data_in_ais">Заносим данные в АИС
 	   		<label id="d_fill_data_in_ais_ok"><input type="radio" id="radio_d_fill_data_in_ais" onclick="ten()">Далее</label>
+			<button id="view_d_fill_data_in_ais" onclick="view_d_fill_data_in_ais()">Как это выглядит в АИС</button>
 	   </div>
 	   <div id="d_registering_case">Регистрируем дело
 	   		<label id="d_registering_case_ok"><input type="radio" id="radio_d_registering_case" onclick="eleven()">Далее</label>
+			<button id="view_d_registering_case" onclick="view_d_registering_case()">Как это выглядит в АИС</button>
 	   </div>
 	   <div id="d_send_inquiry">Отправляем запрос
 	   		<label id="d_send_inquiry_ok"><input type="radio" id="radio_d_send_inquiry" onclick="twelve()">Далее</label>
+			<button id="view_d_send_inquiry" onclick="view_d_send_inquiry(1)">Как это выглядит в АИС</button>
 	   </div>
 	   <div id="var_see_pdf">Смотрим полученный PDF-файл
 			<label id="var_see_pdf_operation_success"><input type="radio" id="radio_var_see_pdf_operation_success" onclick="thirteen()">Операция выполнена успешно</label>
@@ -73,6 +80,7 @@
 			<label id="var_see_pdf_user_not_confirmed"><input type="radio" id="radio_var_see_pdf_user_not_confirmed" onclick="five()">Статус: Ошибка: Пользователь не подтвержден</label>
 			<label id="var_see_pdf_user_not_found"><input type="radio" id="radio_var_see_pdf_user_not_found" onclick="twenty_eight()">Статус: Пользователь не найден</label>
 			<label id="var_see_pdf_data_is_checked"><input type="radio" id="radio_var_see_pdf_data_is_checked" onclick="twenty_nine()">Статус: Идет проверка данных учетной записи в БГИР</label>
+			<button id="view_var_see_pdf" onclick="view_var_see_pdf(1)">Как это выглядит в АИС</button>
 		</div>
 	   <div id="d_complete_by_procedure">Через процедуры завершаем дело
 	   		<label id="d_complete_by_procedure_ok"><input type="radio" id="radio_d_complete_by_procedure" onclick="allRight()">Всё готово, можно завершать обслуживание!</label>
@@ -80,5 +88,15 @@
 	   <div id="d_dos">Отказ в обслуживании</div>
 	   <div id="d_help_4099">Звоните в IT</div>
 	   <input type="reset" value="Начать всё сначала" id="reset_button" onclick="location.reload()">
+
+	   <img src="img/new_case.jpg" id="img_new_case">
+	   <img src="img/d_choose_responsible.jpg" id="img_d_choose_responsible">
+	   <img src="img/d_fill_data_in_ais.jpg" id="img_d_fill_data_in_ais">
+	   <img src="img/d_registering_case.jpg" id="img_d_registering_case">
+	   <img src="img/d_send_inquiry1_new.jpg" id="img_d_send_inquiry1" onclick="view_d_send_inquiry(2)">
+	   <img src="img/d_send_inquiry2_new.jpg" id="img_d_send_inquiry2" onclick="view_d_send_inquiry(3)">
+	   <img src="img/d_send_inquiry3_new.jpg" id="img_d_send_inquiry3" onclick="view_d_send_inquiry(4)">
+	   <img src="img/var_see_pdf1_new.jpg" id="img_var_see_pdf1" onclick="view_var_see_pdf(2)">
+	   <img src="img/var_see_pdf2_new.jpg" id="img_var_see_pdf2" onclick="view_var_see_pdf(3)">
    </body>
 </html>

@@ -11,6 +11,14 @@ function clearAll(){
         {
             document.getElementsByTagName('INPUT')[i].style.display = "none";
         }
+        for(i=0; i < document.getElementsByTagName('button').length; i++)
+        {
+            document.getElementsByTagName('button')[i].style.display = "inherit";
+        }
+        for(i=0; i < document.getElementsByTagName('img').length; i++)
+        {
+            document.getElementsByTagName('img')[i].style.display = "none";
+        }
 }
 function allRight() {
     if (document.getElementById("radio_d_complete_by_procedure").checked) {

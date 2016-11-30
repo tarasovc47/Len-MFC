@@ -29,3 +29,13 @@ div label:hover {
     text-decoration: underline;
     transition-duration: 0.5s;
 }
+img {
+    display: none;
+    border: 1px solid gray;
+    margin: 5px;
+    border-radius: 5px;
+}
+button {
+    margin: 20px;
+    padding: 5px;
+}
