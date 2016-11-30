@@ -15,6 +15,7 @@ function clearAll(){
 function allRight() {
     if (document.getElementById("radio_d_complete_by_procedure").checked) {
             clearAll();
+            document.getElementById("reset_button").style.display = "block";
     }
 }
 /*
@@ -32,6 +33,7 @@ function one() {//есть пасппорт и снилс
     else if (document.getElementById("radio_n_have_passport_and_snils").checked) {
         clearAll();
         document.getElementById("d_dos").style.display = "block";
+        document.getElementById("reset_button").style.display = "block";
     }
 }
 function two() {//пасппорт и снилс совпадают
@@ -45,6 +47,7 @@ function two() {//пасппорт и снилс совпадают
     else if (document.getElementById("radio_n_passport_and_snils_match").checked) {
         clearAll();
         document.getElementById("d_dos").style.display = "block";
+        document.getElementById("reset_button").style.display = "block";
     }
 }
 function three() {//какая услуга в талоне?
@@ -165,24 +168,27 @@ function thirteen() {//ответ в пдф "операция успешна" ->
             clearAll();
             document.getElementById("d_complete_by_procedure").style.display = "block";
             document.getElementById("d_complete_by_procedure_ok").style.display = "block";
+            document.getElementById("reset_button").style.display = "block";
     }
 }
 function fourteen() {//указанный телефон... -> ничего страшного, жди еще одну пдф
     if (document.getElementById("radio_var_see_pdf_specified_mobile").checked) {
             clearAll();
+            document.getElementById("var_see_pdf").style.display = "block";
             document.getElementById("d_no_fear").style.display = "block";
     }
 }
 function fifteen() {//ответ в пдф "уже есть подтверждённый аккаунт" -> копируем карточку участника
     if (document.getElementById("radio_var_see_pdf_have_a_confirmed_account").checked) {
             clearAll();
+            document.getElementById("var_see_pdf").style.display = "block";
             document.getElementById("d_copy_card_after_registration").style.display = "block";
     }
 }
 function sixteen() {//в пдф "бгир" -> сверяем все данные (варианты "ok" и "fix")
     if (document.getElementById("radio_var_see_pdf_bgir").checked) {
             clearAll();
-            document.getElementById("var_check_data").style.display = "block";
+            document.getElementById("var_see_pdf").style.display = "block";
             document.getElementById("var_check_data_ok").style.display = "block";
             document.getElementById("var_check_data_fix").style.display = "block";
     }
@@ -191,11 +197,13 @@ function seventeen() {//в карточке ошибок нет -> звонит�
     if (document.getElementById("radio_var_check_data_ok").checked) {
             clearAll();
             document.getElementById("d_help_4099").style.display = "block";
+            document.getElementById("reset_button").style.display = "block";
     }
 }
 function eighteen() {//в карточке найдены ошибки -> исправляй
     if (document.getElementById("radio_var_check_data_fix").checked) {
             clearAll();
+            document.getElementById("var_see_pdf").style.display = "block";
             document.getElementById("d_fix_user_card").style.display = "block";
             document.getElementById("d_fix_user_card_ok").style.display = "block";
     }
@@ -212,6 +220,7 @@ function twenty() {// подтверждение через ЭЦП успешн�
             clearAll();
             document.getElementById("d_complete_by_procedure").style.display = "block";
             document.getElementById("d_complete_by_procedure_ok").style.display = "block";
+            document.getElementById("reset_button").style.display = "block";
     }
 }
 function twenty_one() {//ничего страшного -> что в пдф?
@@ -280,6 +289,7 @@ function twenty_eight() {//восстановление не нашло поль
 function twenty_nine() {//в пдф "идет проверка данных БГИР" -> что в пдф?
     if (document.getElementById("radio_var_see_pdf_data_is_checked").checked) {
         clearAll();
+        document.getElementById("var_see_pdf").style.display = "block";
         document.getElementById("d_no_fear").style.display = "block";
     }
 }
