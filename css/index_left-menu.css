@@ -1,8 +1,8 @@
 .left_menu {
     float: left;
     background: lightgray;
-    width: 250px;
-    height: 750px;
+    width: 180px;
+    height: 800px;
 }
 input[type="radio"] {
     display: none;
@@ -12,6 +12,7 @@ input[type="radio"] {
     width: 250px;
     height: 10px;
     transition: 0.5s;
+    padding: 5px;
 }
 #radio_valid_sites:checked ~ .radio_valid_sites {
     color: red;
@@ -19,6 +20,6 @@ input[type="radio"] {
 #radio_faq_esia:checked ~ .radio_faq_esia {
     color: red;
 }
-#radio_employees:checked ~ .radio_employees {
+#radio_wiki_esia:checked ~ .radio_wiki_esia {
     color: red;
 }

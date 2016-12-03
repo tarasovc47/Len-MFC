@@ -14,6 +14,7 @@ div label div:hover::after {
     width: 300px;
     word-wrap: break-word;
     background: #FAEBD7;
+    padding: 5px;
 }
 label:hover::after {
     position: absolute;
@@ -23,6 +24,7 @@ label:hover::after {
     width: 300px;
     word-wrap: break-word;
     background: #F5F5DC;
+    padding: 5px;
 }
 #yn_have_passport_and_snils:hover::after {
     content: "Если у посетителя с собой нет паспорта или СНИЛС, то это не позволяет идентифицировать личность человека, что даёт право отказать в обслуживании. Пусть приходит позже с указанными документами";
@@ -76,7 +78,7 @@ label:hover::after {
     content: "Это предупреждение о том, что телефон, указаный в деле используется в другой учётной записи";
 }
 #d_no_fear:hover::after {
-    content: 'Госуслуги сообщают, что в случае успеха данного дела они "отберут" указанный телефон из другой учётной записи и привяжут его к этой. Ждите еще файлы во вкладке "Документы"';
+    content: 'Ждите еще файлы во вкладке "Документы"';
 }
 #var_see_pdf_have_a_confirmed_account:hover::after {
     content: "Это сообщение означает, что уже есть учётная запись, к тому же подтверждённая";
