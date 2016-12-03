@@ -31,10 +31,15 @@ li {
 }
 .arrow_down {
     transition-duration: 0.5s;
+    transition-timing-function: ease-in;
 }
 span {
     z-index: 10;
 }
 .hidden {
     display: none;
+}
+hr {
+    width: 570px;
+    margin-left: 0;
 }
