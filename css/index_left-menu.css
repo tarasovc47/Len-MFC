@@ -1,7 +1,7 @@
 .left_menu {
     float: left;
     background: lightgray;
-    width: 180px;
+    width: 10%;
     height: 800px;
 }
 input[type="radio"] {
@@ -9,7 +9,6 @@ input[type="radio"] {
 }
 .left_menu label {
     display: block;
-    width: 250px;
     height: 10px;
     transition: 0.5s;
     padding: 5px;
